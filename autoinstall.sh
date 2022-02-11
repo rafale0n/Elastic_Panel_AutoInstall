@@ -2,7 +2,10 @@ apt update
 apt-get install curl apt-transport-https -y
 curl -s https://artifacts.elastic.co/GPG-KEY-elasticsearch | apt-key add -
 
-echo "deb https://artifacts.elastic.co/packages/7.x/apt stable main" | tee /etc/apt/sources.list.d/elastic-7.x.list
+#echo "deb https://artifacts.elastic.co/packages/7.x/apt stable main" | tee /etc/apt/sources.list.d/elastic-7.x.list
+echo "deb [trusted=yes] https://artifacts.elastic.co/packages/8.x/apt stable main" | sudo tee /etc/apt/sources.list.d/elastic-8.x.list
+
+
 
 apt-get update
 
